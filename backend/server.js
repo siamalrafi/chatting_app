@@ -1,4 +1,5 @@
 const express = require("express");
+const dotenv = require("dotenv");
 const chats = require("./data/data");
 
 const app = express();
@@ -16,6 +17,6 @@ app.get("/api/chat/:id", (req, res) => {
     res.send(singleChat)
 });
 
+const port = process.env.PORT || 5000;
 
-
-app.listen(5000, console.log("Server started on PORT:5000"))
+app.listen(port, console.log(`Server started on PORT:${port}`));
