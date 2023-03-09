@@ -12,7 +12,7 @@ const Login = () => {
     const SubmitHandler = () => {
         console.log();
     };
- 
+
 
     return (
         <VStack>
@@ -40,12 +40,18 @@ const Login = () => {
                 </InputGroup>
             </FormControl>
 
-
             <Button colorScheme="blue" width="100%" style={{ marginTop: 15 }}
                 onClick={SubmitHandler}>
                 Login
             </Button>
 
+            <Button colorScheme="red" width="100%" style={{ marginTop: 15 }}
+                onClick={() => {
+                    setEmail("guser@example.")
+                    setPassword("123456")
+                }}>
+                As a Guest.
+            </Button>
 
 
         </VStack>

@@ -80,7 +80,7 @@ const SignUp = () => {
                 onClick={SubmitHandler}>
                 Register
             </Button>
-
+   
 
 
         </VStack>
