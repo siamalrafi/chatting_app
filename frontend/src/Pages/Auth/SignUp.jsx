@@ -31,14 +31,14 @@ const SignUp = () => {
                 <FormLabel>Email</FormLabel>
                 <Input
                     placeholder='Enter Your Email'
-                    onChange={(e) => setName(e.target.value)}></Input>
+                    onChange={(e) => setEmail(e.target.value)}></Input>
             </FormControl>
             <FormControl id="password" isRequired>
                 <FormLabel>Password</FormLabel>
                 <InputGroup>
                     <Input type={show ? "text" : "password"}
                         placeholder='Enter Your password'
-                        onChange={(e) => setName(e.target.value)}></Input>
+                        onChange={(e) => setPassword(e.target.value)}></Input>
 
                     <InputRightElement width="4.5rem">
                         <Button h="1.75rem" size="sm"
@@ -54,7 +54,7 @@ const SignUp = () => {
                 <InputGroup>
                     <Input type={show ? "text" : "password"}
                         placeholder='Enter Your Confirm Password'
-                        onChange={(e) => setName(e.target.value)}></Input>
+                        onChange={(e) => setConfirmPass(e.target.value)}></Input>
 
                     <InputRightElement width="4.5rem">
                         <Button h="1.75rem" size="sm"
@@ -80,7 +80,7 @@ const SignUp = () => {
                 onClick={SubmitHandler}>
                 Register
             </Button>
-   
+
 
 
         </VStack>
