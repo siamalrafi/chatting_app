@@ -1,5 +1,5 @@
 const mongoose = require("mongoose");
-
+const colors = require("colors");
 
 const connectDB = async () => {
     try {
@@ -10,7 +10,7 @@ const connectDB = async () => {
             useUnifiedTopology: true
         });
 
-        console.log(`MongoDB Connected : ${conn.connection.host}`);
+        console.log(`MongoDB Connected : ${conn.connection.host}`.bgGreen.bold);
 
     } catch (error) {
         console.log(`Error ${error.massage}`);

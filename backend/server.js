@@ -2,6 +2,7 @@ const express = require("express");
 const dotenv = require("dotenv");
 const chats = require("./data/data");
 const connectDB = require("./config/db");
+const userRoutes = require("./routes/userRoute");
 
 
 dotenv.config();
@@ -12,7 +13,8 @@ app.get("/", (req, res) => {
 });
 
 
-app.get("/api/chat", (req, res) => {
+
+app.get("/api/chat", userRoutes, (req, res) => {
     res.send(chats)
 });
 app.get("/api/chat/:id", (req, res) => {
